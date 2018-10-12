@@ -27,6 +27,7 @@ function setupHealth(expressRouter, baseURI, dependenciesDef, cbLogger) {
     dependenciesDef = jsYaml.load(fs.readFileSync(dependenciesDef));
   }
   expressRouter.get(`${baseURI}/health`, setupHealthHandler(dependenciesDef, cbLogger));
+  cbLogger(`IUNCTIO_HEALTH: Setup a Healthcheck endpoint at '${baseURI}/health'`);
 }
 
 function setupHealthHandler(depsDef, cbLogger) {
@@ -67,7 +68,7 @@ function setupHealthHandler(depsDef, cbLogger) {
           failDetails += `Service ${result.depName} failed check, expected ${result.expectedStatusCode} but received a ${result.statusCode}\n`;
         }
       })
-      cbLogger(`Healthcheck failed, details -> ${failDetails}`);
+      cbLogger(`IUNCTIO_HEALTH: Healthcheck failed, details -> ${failDetails}`);
       response.status(503);
       response.end();
     } else {

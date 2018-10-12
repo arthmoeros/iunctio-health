@@ -1,6 +1,6 @@
 {
   "name": "iunctio-health",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Health endpoint module for Iunctio",
   "main": "index.js",
   "dependencies": {

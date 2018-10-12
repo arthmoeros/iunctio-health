@@ -1,0 +1,6 @@
+dependencies:
+  '@items':
+    name: 'string:required'
+    endpoint: 'string:required'
+    timeout: 'number:required'
+    expectedStatusCode: 'number:required'

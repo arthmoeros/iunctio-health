@@ -10,7 +10,7 @@ npm install iunctio-health
 ```
 
 ```js
-const setupHealth = require('iunctioHealth');
+const setupHealth = require('iunctio-health');
 
 const router = express.Router();
 

@@ -1,6 +1,6 @@
 {
   "name": "rik-health",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Health endpoint module for RIK",
   "main": "index.js",
   "dependencies": {

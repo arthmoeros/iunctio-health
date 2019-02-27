@@ -1,16 +1,16 @@
-# iunctio-health
-Health endpoint module for Iunctio
+# rik-health
+Health endpoint module for RIK
 
 Requires Express Installed
 
 ## Usage
 
 ```bash
-npm install iunctio-health
+npm install rik-health
 ```
 
 ```js
-const setupHealth = require('iunctio-health');
+const setupHealth = require('rik-health');
 
 const router = express.Router();
 

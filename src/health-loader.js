@@ -28,7 +28,7 @@ function setupHealth(expressRouter, baseURI, dependenciesDef, logger) {
     dependenciesDef = jsYaml.load(fs.readFileSync(dependenciesDef));
   }
   expressRouter.get(`/${baseURI}/health`, setupHealthHandler(dependenciesDef, logger));
-  logger.info(`IUNCTIO_HEALTH: Setup a Healthcheck endpoint at '/${baseURI}/health'`);
+  logger.info(`RIK_HEALTH: Setup a Healthcheck endpoint at '/${baseURI}/health'`);
 }
 
 function setupHealthHandler(depsDef, logger) {
@@ -45,7 +45,7 @@ function setupHealthHandler(depsDef, logger) {
             failDetails += `Service ${result.depName} failed check, expected ${result.expectedStatusCode} but received a ${result.statusCode}\n`;
           }
         })
-        logger.error(`IUNCTIO_HEALTH: Healthcheck failed, details -> ${failDetails}`);
+        logger.error(`RIK_HEALTH: Healthcheck failed, details -> ${failDetails}`);
         response.status(503);
         response.end();
       } else {
@@ -53,7 +53,7 @@ function setupHealthHandler(depsDef, logger) {
         response.end();
       }
     }).catch((err) => {
-      logger.error(`IUNCTIO_HEALTH: Healthcheck failed, details -> ${err}`);
+      logger.error(`RIK_HEALTH: Healthcheck failed, details -> ${err}`);
       response.status(503);
       response.end();
     });

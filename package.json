@@ -1,7 +1,7 @@
 {
-  "name": "iunctio-health",
-  "version": "0.0.3",
-  "description": "Health endpoint module for Iunctio",
+  "name": "rik-health",
+  "version": "0.0.0",
+  "description": "Health endpoint module for RIK",
   "main": "index.js",
   "dependencies": {
     "express": "^4.16.4",
@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arthmoeros/iunctio-health.git"
+    "url": "git+https://github.com/arthmoeros/rik-health.git"
   },
   "author": "arthmoeros",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/arthmoeros/iunctio-health/issues"
+    "url": "https://github.com/arthmoeros/rik-health/issues"
   },
-  "homepage": "https://github.com/arthmoeros/iunctio-health#readme"
+  "homepage": "https://github.com/arthmoeros/rik-health#readme"
 }
